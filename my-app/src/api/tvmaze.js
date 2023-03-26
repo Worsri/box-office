@@ -1,4 +1,4 @@
-const BASE_URL = 'http://api.tvmaze.com';
+const BASE_URL = 'http://api.tvmaze.com'; /**https://api.tvmaze.com/search/1 */
 
 const apiGet = async queryString => {
   // throw new Error('something bad has happened');
@@ -10,3 +10,4 @@ const apiGet = async queryString => {
 
 export const searchForShows = query => apiGet(`/search/shows?q=${query}`);
 export const searchForPeople = query => apiGet(`/search/people?q=${query}`);
+export const getShowById = showId => apiGet(`/shows/${showId}`);
