@@ -5,6 +5,7 @@ import Show from './pages/Show';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { GlobalTheme } from './theme';
 
 const queryClient = new QueryClient();
 
@@ -12,16 +13,18 @@ function App() {
   return (
     <>
       <QueryClientProvider client={queryClient}>
-        <BrowserRouter>
-          <Routes>
-            <Route element={<MainLayout />}>
-              <Route path="/" element={<Home />} />
-              <Route path="/starred" element={<Starred />} />
-            </Route>
+        <GlobalTheme>
+          <BrowserRouter>
+            <Routes>
+              <Route element={<MainLayout />}>
+                <Route path="/" element={<Home />} />
+                <Route path="/starred" element={<Starred />} />
+              </Route>
 
-            <Route path="/show/:showId" element={<Show />} />
-          </Routes>
-        </BrowserRouter>
+              <Route path="/show/:showId" element={<Show />} />
+            </Routes>
+          </BrowserRouter>
+        </GlobalTheme>
       </QueryClientProvider>
     </>
   );
