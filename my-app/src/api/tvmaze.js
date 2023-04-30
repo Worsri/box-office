@@ -1,4 +1,4 @@
-const BASE_URL = 'http://api.tvmaze.com'; /**https://api.tvmaze.com/search/1 */
+const BASE_URL = 'https://api.tvmaze.com'; /**https://api.tvmaze.com/search/1 */
 
 const apiGet = async queryString => {
   // throw new Error('something bad has happened');

@@ -6,7 +6,7 @@ import Details from '../components/shows/Details';
 import ShowMainData from '../components/shows/ShowMainData';
 import Seasons from '../components/shows/Seasons';
 import Cast from '../components/shows/Cast';
-import React from 'react';
+
 import styled from 'styled-components';
 import { TextCenter } from '../components/common/TextCenter';
 
